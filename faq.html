@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أسئلة شائعة - MindSync</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="MindSync Logo" class="logo-img">
+                <span class="logo-text">MindSync</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">خدماتنا</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">تواصل معنا</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link active">أسئلة شائعة</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">أسئلة شائعة</h1>
+            <p class="page-subtitle">إجابات شاملة على الأسئلة الأكثر شيوعاً حول خدماتنا</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-categories">
+                <div class="category-tabs">
+                    <button class="tab-btn active" data-category="general">عام</button>
+                    <button class="tab-btn" data-category="services">الخدمات</button>
+                    <button class="tab-btn" data-category="pricing">الأسعار</button>
+                    <button class="tab-btn" data-category="process">العملية</button>
+                </div>
+
+                <!-- General FAQ -->
+                <div class="faq-category active" id="general">
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ما هي MindSync؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>MindSync هي وكالة تسويق رقمي مبتكرة تساعد الشركات على النمو والتميز في العالم الرقمي. نحن نمزج الإبداع مع الاستراتيجية لتقديم حلول تسويقية فعالة ومدفوعة بالبيانات.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>أين تقع MindSync؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نحن نقع في الجيزة، مصر، ولكننا نعمل مع عملاء من جميع أنحاء العالم العربي ودول الخليج عن بُعد.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل تعملون مع الشركات الصغيرة والمتوسطة؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، نعمل مع شركات من جميع الأحجام، من الشركات الناشئة إلى الشركات الكبيرة. نقدم حلول مخصصة تناسب احتياجات وميزانية كل عميل.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ما هي ساعات عملكم؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعمل من الأحد إلى الخميس من الساعة 9:00 صباحاً حتى 6:00 مساءً بتوقيت القاهرة. ولكننا متاحون للطوارئ خارج هذه الأوقات.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services FAQ -->
+                <div class="faq-category" id="services">
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ما هي الخدمات التي تقدمونها؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نقدم مجموعة شاملة من الخدمات تشمل: تحرير الفيديو، استراتيجيات التسويق والتخطيط، التصميم الجرافيكي، إدارة وسائل التواصل الاجتماعي، والتسويق الرقمي.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل يمكنكم إدارة حساباتنا على وسائل التواصل الاجتماعي بالكامل؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، نقدم خدمة إدارة شاملة تشمل إنشاء المحتوى، النشر، التفاعل مع الجمهور، إدارة الحملات الإعلانية، وتحليل الأداء.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل تقدمون خدمات تحسين محركات البحث (SEO)؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، تحسين محركات البحث جزء من خدمات التسويق الرقمي التي نقدمها. نعمل على تحسين ترتيب موقعك في نتائج البحث.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل يمكنكم تصميم موقع إلكتروني؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، نقدم خدمات تصميم وتطوير المواقع الإلكترونية كجزء من خدمات التصميم الجرافيكي والتسويق الرقمي.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing FAQ -->
+                <div class="faq-category" id="pricing">
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كيف تحددون أسعار خدماتكم؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نحدد الأسعار بناءً على نوع الخدمة، حجم المشروع، المدة الزمنية المطلوبة، ومستوى التعقيد. نقدم عروض أسعار مخصصة لكل عميل.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل تقدمون باقات شهرية؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، نقدم باقات شهرية لخدمات إدارة وسائل التواصل الاجتماعي والتسويق الرقمي. كما نقدم عقود سنوية بأسعار مخفضة.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ما هي طرق الدفع المتاحة؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نقبل التحويل البنكي، فودافون كاش، أورانج موني، وجميع طرق الدفع الإلكتروني المتاحة في مصر والدول العربية.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل تطلبون دفعة مقدمة؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، عادة ما نطلب دفعة مقدمة تتراوح بين 30-50% من قيمة المشروع قبل البدء في العمل، والباقي عند التسليم.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process FAQ -->
+                <div class="faq-category" id="process">
+                    <div class="faq-items">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كم يستغرق تنفيذ المشروع؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>يعتمد وقت التنفيذ على نوع وحجم المشروع. المشاريع البسيطة تستغرق أسبوع، بينما المشاريع المعقدة قد تستغرق شهر أو أكثر.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>كيف تتم عملية التواصل أثناء المشروع؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نتواصل عبر البريد الإلكتروني، واتساب، أو أي وسيلة تفضلونها. نقدم تقارير دورية ونحدثكم بكل جديد في المشروع.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل يمكنني طلب تعديلات على العمل؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، نقدم عدد محدود من التعديلات المجانية (عادة 2-3 جولات) حسب نوع المشروع. التعديلات الإضافية تكون مقابل رسوم إضافية.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>هل تقدمون استشارة مجانية؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نعم، نقدم استشارة مجانية لمدة 30 دقيقة لمناقشة احتياجاتكم ووضع خطة أولية للمشروع.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>ماذا يحدث بعد انتهاء المشروع؟</h3>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>نقدم دعم فني لمدة شهر بعد التسليم، ونبقى متاحين للمساعدة في أي استفسارات أو تطويرات مستقبلية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">لم تجد إجابة لسؤالك؟</h2>
+                <p class="cta-description">تواصل معنا مباشرة وسنكون سعداء للإجابة على جميع استفساراتك</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">تواصل معنا</a>
+                    <a href="mailto:Mindsync002025@gmail.com" class="btn btn-secondary">أرسل إيميل</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="MindSync Logo" class="logo-img">
+                        <span class="logo-text">MindSync</span>
+                    </div>
+                    <p class="footer-description">
+                        وكالة تسويق رقمي مبتكرة تساعد الشركات على النمو والتميز في العالم الرقمي
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/mindsync11" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_mindsync1" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/_MINDSYNC_" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.behance.net/80cbb3f2" target="_blank" class="social-link">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">خدماتنا</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="faq.html">أسئلة شائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#video-editing">تحرير الفيديو</a></li>
+                        <li><a href="services.html#marketing">استراتيجيات التسويق</a></li>
+                        <li><a href="services.html#design">التصميم الجرافيكي</a></li>
+                        <li><a href="services.html#social-media">إدارة وسائل التواصل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Mindsync002025@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>الجيزة، مصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MindSync. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
