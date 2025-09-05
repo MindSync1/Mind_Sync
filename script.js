@@ -255,3 +255,162 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+/* ===============================
+   Block Inspect Element + Modern Alert
+   =============================== */
+
+// Detect and block right-click
+document.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+    showCustomAlert('❌ هذا الإجراء غير مسموح به على هذا الموقع');
+});
+
+// Block all common DevTools shortcuts
+document.addEventListener('keydown', (e) => {
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) || // DevTools
+        (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase())) // View Source & Save
+    ) {
+        e.preventDefault();
+        showCustomAlert('⚠️ هذا الإجراء غير مسموح به على هذا الموقع');
+    }
+});
+
+/* ===============================
+   Detect if DevTools is Open
+   =============================== */
+let devToolsOpen = false;
+
+function detectDevTools() {
+    const threshold = 160;
+    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+
+    if (widthThreshold || heightThreshold) {
+        if (!devToolsOpen) {
+            devToolsOpen = true;
+            lockPage();
+        }
+    } else {
+        devToolsOpen = false;
+    }
+}
+
+setInterval(detectDevTools, 1000);
+
+/* ===============================
+   Lock Page When DevTools Opened
+   =============================== */
+function lockPage() {
+    // Remove all content
+    document.body.innerHTML = `
+        <div class="locked-page">
+            <h1>🚫 تم حظر الموقع</h1>
+            <p>تم اكتشاف محاولتك لفتح أدوات المطور.</p>
+            <p>لأسباب أمنية، لا يمكنك الوصول إلى هذه الصفحة.</p>
+        </div>
+    `;
+
+    // Style locked page
+    const lockStyle = document.createElement('style');
+    lockStyle.textContent = `
+        body {
+            background: #0d1117;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .locked-page h1 {
+            color: #ff4444;
+            font-size: 2.5rem;
+        }
+        .locked-page p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+    `;
+    document.head.appendChild(lockStyle);
+}
+
+/* ===============================
+   Custom Modern Alert
+   =============================== */
+function showCustomAlert(message) {
+    if (document.querySelector('.custom-alert')) return;
+
+    const alertBox = document.createElement('div');
+    alertBox.className = 'custom-alert';
+    alertBox.innerHTML = `
+        <div class="alert-content">
+            <span class="alert-message">${message}</span>
+            <button class="alert-close">حسناً</button>
+        </div>
+    `;
+    document.body.appendChild(alertBox);
+
+    // Animate in
+    setTimeout(() => {
+        alertBox.style.opacity = '1';
+        alertBox.style.transform = 'translateY(0)';
+    }, 50);
+
+    // Close button
+    alertBox.querySelector('.alert-close').addEventListener('click', () => {
+        alertBox.style.opacity = '0';
+        alertBox.style.transform = 'translateY(-20px)';
+        setTimeout(() => alertBox.remove(), 300);
+    });
+}
+
+// Custom Alert Styles
+const customAlertStyle = document.createElement('style');
+customAlertStyle.textContent = `
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: rgba(255, 255, 255, 0.98);
+    color: #003366;
+    border: 1px solid #66ccff;
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+    border-radius: 12px;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    max-width: 300px;
+    text-align: center;
+}
+
+.alert-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert-message {
+    font-size: 1rem;
+}
+
+.alert-close {
+    padding: 6px 14px;
+    background: #66ccff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.alert-close:hover {
+    background: #3399ff;
+}
+`;
+document.head.appendChild(customAlertStyle);
